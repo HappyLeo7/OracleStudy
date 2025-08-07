@@ -16,7 +16,7 @@ create table 대학교
 --구조변경 제약걸기
 alter table 대학교
 	add constraint unique_대학교_학번 unique(학번)
-	
+	              
 --제약 체크하기
 select * from user_constraints where table_name='대학교'
 	
