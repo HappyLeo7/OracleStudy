@@ -20,3 +20,12 @@ alter table 대학교
 --제약 체크하기
 select * from user_constraints where table_name='대학교'
 	
+select ceil(10.654) as CEIL from dual
+
+select * from user_tables
+
+select tname from tab
+
+select * from gogek
+insert into gogek(goaddr) values('서울 동작구')
+
