@@ -230,13 +230,16 @@ as
 		,floor(s_v.sapay/12) as 월급
 		,s_v.sapay/12 as 월급2
 		,months_between(sysdate,s_v.sahire) * s_v.sapay/12 as 총근무월수X월급
-		,floor(((months_between(sysdate,s_v.sahire)*(s_v.sapay/12))/12)) as severance_pay
+		,to_char(floor(((months_between(sysdate,s_v.sahire)*(s_v.sapay/12))/12))*10000,'L999,999,999') as severance_pay
 		,((months_between(sysdate,s_v.sahire)*(s_v.sapay/12))/12) as severance_pay2
 		from (select * from sawon_view)s_v
 		
+		select * from sawon
+		select * from sawon_view
 		select * from sawon_view2
 		
-		  	select months_between(to_date('2025-05-06','yyyy-mm-dd')
+--		months_between 사용방법 : 날짜를 이용한 월수 구하는 방법
+		select months_between(to_date('2025-05-06','yyyy-mm-dd')
 												  ,to_date('2024-05-06','yyyy-mm-dd'))
 												  from dual;
 		
